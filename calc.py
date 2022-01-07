@@ -2,16 +2,19 @@ from sympy import *
 
 x, y, z = symbols('x y z')
 
-a1 = 5.55*x+5*(2.58*5.55)/2
-a2 = 5.55*y+3*(2.58*5.55)/2
-a3 = 5.55*z+1*(2.58*5.55)/2
-a4 = 5.55*(17.73-x)+5.55*(17.73-y)+5.55*(17.73-z)
-at = (17.73*3*5.55)+9*(2.58*5.55)/2
+a1 = 6.33*x+5*(2.96*6.33)/2
+a2 = 6.33*y+3*(2.96*6.33)/2
+a3 = 6.33*z+1*(2.96*6.33)/2
+a4 = 6.33*(17.73-x)+6.33*(17.73-y)+6.33*(17.73-z)
+at = (17.73*3*6.33)+9*(2.96*6.33)/2
 
 answer = solve([Eq(a1, a2), Eq(a1, a3), Eq(a1, a4), Eq(a1+a2+a3+a4,at)], [x, y, z])
 print(answer)
-print('a1=', a1.evalf(subs={x: 9.75000000000000, y: 12.3300000000000, z: 14.9100000000000}))
-print('a2=', a2.evalf(subs={x: 9.75000000000000, y: 12.3300000000000, z: 14.9100000000000}))
-print('a3=', a3.evalf(subs={x: 9.75000000000000, y: 12.3300000000000, z: 14.9100000000000}))
-print('a4=', a4.evalf(subs={x: 9.75000000000000, y: 12.3300000000000, z: 14.9100000000000}))
+print('a1=', a1.evalf(subs=answer))
+print('a2=', a2.evalf(subs=answer))
+print('a3=', a3.evalf(subs=answer))
+print('a4=', a4.evalf(subs=answer))
 print('at=', at)
+print('x=', x.evalf(subs=answer))
+print('y=', y.evalf(subs=answer))
+print('z=', z.evalf(subs=answer))
