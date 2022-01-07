@@ -16,7 +16,7 @@ eq3 = a1 - a4
 eq4 = a1+a2+a3+a4-at
 eq5 = w1+w2+w3-19
 
-answer = nsolve((eq1, eq2, eq3, eq4, eq5), (w1, w2, w3, h2, h3), (6, 6, 7, 9, 10), verify=False)
+answer = nsolve((eq1, eq2, eq3, eq4, eq5), (w1, w2, w3, h2, h3), (1, 1, 1, 1, 1))
 print(answer)
 print('a1=', a1.evalf(subs=answer))
 print('a2=', a2.evalf(subs=answer))
