@@ -18,6 +18,12 @@ eq3 = a1 - a4
 eq4 = a1+a2+a3+a4-at
 eq5 = w1+w2+w3-wt
 
+eq1 = nsimplify(eq1, rational=1)
+eq2 = nsimplify(eq2, rational=1)
+eq3 = nsimplify(eq3, rational=1)
+eq4 = nsimplify(eq4, rational=1)
+eq5 = nsimplify(eq5, rational=1)
+
 answer = nsolve((eq1, eq2, eq3, eq4, eq5), (w1, w2, w3, h2, h3), (6, 7, 8, 9, 10))
 print(answer)
 print('a1=', a1.evalf(subs=answer))
